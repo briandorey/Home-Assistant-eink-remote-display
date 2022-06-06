@@ -238,8 +238,8 @@ void setup() {
   display.drawBitmap((display.width() / 2) + 10, 0, iconwater, 20, 20, GxEPD_BLACK);
   
   // Solar today generated header
-  u8g2Fonts.setCursor(55, 125);  
-  u8g2Fonts.print("Kw today");
+  u8g2Fonts.setCursor(50, 125);  
+  u8g2Fonts.print("kWh today");
 
   // Print last updated
   u8g2Fonts.setFont(u8g2_font_helvR10_tf);
@@ -256,14 +256,14 @@ void setup() {
   //fltHotWater
   dtostrf(fltHotWater,3, 1, outstr);
   u8g2Fonts.print(outstr);
-  u8g2Fonts.print("c");
+  u8g2Fonts.print("°C");
 
   // Print solar watts
   u8g2Fonts.setCursor(15 , 80);
   
   dtostrf(fltSolarPVWatts,4, 1, outstr);
   u8g2Fonts.print(outstr);
-  u8g2Fonts.print("w");
+  u8g2Fonts.print("W");
   
   // Print solar Kw today
   u8g2Fonts.setFont(u8g2_font_logisoso20_tf);
@@ -302,8 +302,8 @@ void DrawBattery(int x, int y) {
     u8g2Fonts.setFont(u8g2_font_helvR14_tf);
     u8g2Fonts.setCursor(x-40, y);
     u8g2Fonts.print(String(percentage) + "%");
-    u8g2Fonts.setCursor(x-100, y);
-    u8g2Fonts.print(String(voltage, 2) + "v");
+    u8g2Fonts.setCursor(x-95, y);
+    u8g2Fonts.print(String(voltage, 2) + "V");
   }
 }
 
