@@ -20,7 +20,7 @@ The DollaTek T5 V1.3 is a rebranded Xinyuan LilyGO T5 2.9", version 2.2 display 
      - [debsahu/HARestAPI](https://github.com/debsahu/HARestAPI)
      - [ArduinoJson](https://arduinojson.org/v6/doc/installation/)
 
-2. Copy all the folders in the lib directory to `"C:\User\<YourName>\Documents\Arduino\libraries"`
+2. Copy all the folders into  the libraries directory at `"C:\User\<YourName>\Documents\Arduino\libraries"`
 3. In Arduino IDE, select `ESP32 Dev Module` in the development board, and keep the other options as default
 4. If you do not find the ESP32 series in the development board, then you should see the following installation method [How to install ESP32 in ArduinoIDE](https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md)
 5. In your Home Assistant install, select the profile page and generate a new `Long-Lived Access Tokens`
