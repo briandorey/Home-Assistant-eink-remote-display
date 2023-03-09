@@ -37,8 +37,8 @@ HARestAPI ha(sclient);
 const char* ssid = "YOURWIFISSID";
 const char* password = "YOURWIFIPASSWORD";
 /* Put StaticIP Address details */
-IPAddress local_ip(192.168.1.1); // Set static IP
-IPAddress gateway(192.168.1.1); // Set network Gateway IP
+IPAddress local_ip(192,168,1,1); // Set static IP
+IPAddress gateway(192,168,1,1); // Set network Gateway IP
 IPAddress subnet(255, 255, 255, 0); // Set static IP
 IPAddress primaryDNS(8, 8, 8, 8);   //optional
 IPAddress secondaryDNS(8, 8, 4, 4); //optional
@@ -169,7 +169,10 @@ void ParseTimeJsonData(String strInput) {
 }
 float ParseSensorJsonData(String strInput) {
   TRACE(strInput);
-  DeserializationError error = deserializeJson(doc, strInput);
+  int strLen = strInput.length() + 1;
+  char charInput[strLen];
+  strInput.toCharArray(charInput, strLen);
+  DeserializationError error = deserializeJson(doc, charInput);
   if (error) {
     Serial.print(F("deserializeJson() failed: "));
     Serial.println(error.f_str());
